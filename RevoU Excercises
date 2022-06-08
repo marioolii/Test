@@ -1,0 +1,40 @@
+No. 1
+SELECT
+     id
+     , display_name AS Name
+     , location
+     , Lower(location) AS location2
+     , reputation
+     , creation_date
+FROM
+    	bigquery-public-data.stackoverflow.users
+WHERE
+    Lower (Location) LIKE 'france' 
+    AND
+    Reputation > 10000
+LIMIT
+     10
+
+No. 2
+SELECT
+     creation_date
+     , text
+FROM
+  bigquery-public-data.stackoverflow.comments
+WHERE
+  text LIKE '%SQL%BigQuery%'
+ORDER BY
+  creation_date DESC
+LIMIT
+     500
+
+No. 3
+SELECT
+     Comment
+     ,      Date
+     ,      Score
+FROM
+     x
+WHERE
+     
+#
